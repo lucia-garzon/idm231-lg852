@@ -57,6 +57,17 @@ html {
     height: auto;
 }
 
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* align-items: center; */
+
+}
+.left {
+    margin-left: 3rem;
+    margin-top: 8rem;
+}
+
 body {
     background-color: var(--main-background);
 }
@@ -75,15 +86,15 @@ h1, h2, h3  {
 .lemon-bold {
     font-family: var(--lemon-bold);
 }
-.title {
+/* .title {
     margin-top: 8rem;
     margin-left: 3rem;
-}
+} */
 
 button {
     background-color: var(--button-color);
     color: var(--secondary-text);
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
 }
 .find-my-character {
     padding: 1rem 4rem;
@@ -122,6 +133,8 @@ button {
     height: 30rem;
     margin: 0 auto;
     justify-content: center;
+    justify-items: center;
+    
 
 
     display: grid;
