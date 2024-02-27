@@ -96,6 +96,10 @@ button {
     color: var(--secondary-text);
     /* margin-left: 3rem; */
 }
+
+.help_icon {
+    margin-top: 45vh;
+}
 .find-my-character {
     padding: 1rem 4rem;
     border-radius: 20px;
@@ -131,7 +135,7 @@ button {
     position: relative;
     width: 30rem;
     height: 30rem;
-    margin: 0 auto;
+    margin: 3rem 3rem 5rem 3rem;
     justify-content: center;
     justify-items: center;
     
