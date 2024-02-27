@@ -92,6 +92,23 @@ button {
     font-size: 1rem;
 }
 
+.find-my-character:hover {
+    font-style: normal;
+    animation: overshoot 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+@keyframes overshoot {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); 
+    }
+    
+    100% {
+        transform: scale(1); 
+    }
+}
+
 .sign {
     background: none;
     border: none;
