@@ -13,6 +13,6 @@
 //   ]
 
 
-function play_sound(selected_sign) {
-    // play a sound based on selected_sign
-  }
+// function play_sound(selected_sign) {
+//   }
+
