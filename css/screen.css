@@ -27,12 +27,12 @@
     box-sizing: border-box;
 }
 
-.league-spartan {
-    font-family: "League-Spartan", sans-serif;
-    src: url('../fonts/League-Spartan.ttf') format('truetype');
-    font-optical-sizing: auto;
-    font-weight: 100-900;
-    font-style: normal;
+@font-face {
+    font-family: "League Spartan";
+    src: url('../fonts/League Spartan.ttf') format('truetype');
+    /* font-optical-sizing: auto; */
+    /* font-weight: 100-900;
+    font-style: normal; */
 }
 
 html {
@@ -47,8 +47,7 @@ html {
     --lemon-light: Lemon-milk-light, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
     --lemon-medium: Lemon-milk-medium, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
     --lemon-bold: Lemon-milk-bold, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-
-    --league-spartan: League-Spartan, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --league-spartan: League Spartan, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .grass img {
@@ -73,6 +72,9 @@ body {
 }
 h1, h2, h3  {
     color: var(--primary-text);
+}
+p {
+    font-family: var(---league-spartan);
 }
 .lemon-regular {
     font-family: var(--lemon-regular);
