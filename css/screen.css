@@ -22,17 +22,14 @@
     /* font-weight: 0 800; */
     /* font-style: light; */
 }
+/* @font-face {
+    font-family: "League Spartan";
+    src: url('../fonts/League Spartan.ttf') format('truetype');
+    
+} */
 
 * {
     box-sizing: border-box;
-}
-
-@font-face {
-    font-family: "League Spartan";
-    src: url('../fonts/League Spartan.ttf') format('truetype');
-    /* font-optical-sizing: auto; */
-    /* font-weight: 100-900;
-    font-style: normal; */
 }
 
 html {
@@ -42,12 +39,12 @@ html {
     --main-background: #CFFFFC;
     --button-color: #25540E;
     --icon-border: #002C1A;
-    --zodiac-blurb: #00300B;
+    --zodiac-blurb: #00300B; 
     --lemon-regular: Lemon-milk, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
     --lemon-light: Lemon-milk-light, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
     --lemon-medium: Lemon-milk-medium, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
     --lemon-bold: Lemon-milk-bold, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-    --league-spartan: League Spartan, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --league-spartan: 'League Spartan', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .grass img {
@@ -74,7 +71,7 @@ h1, h2, h3  {
     color: var(--primary-text);
 }
 p {
-    font-family: var(---league-spartan);
+    font-family: var(--league-spartan);
 }
 .lemon-regular {
     font-family: var(--lemon-regular);
@@ -93,6 +90,9 @@ p {
     margin-left: 3rem;
 } */
 
+label, input {
+    font-family: var(--league-spartan);
+}
 button {
     background-color: var(--button-color);
     color: var(--secondary-text);
@@ -107,6 +107,7 @@ button {
     border-radius: 20px;
     border: none;
     font-size: 1rem;
+    margin-top: 1rem;
 }
 
 .find-my-character:hover {
@@ -232,3 +233,22 @@ button {
     bottom: 2px;
     right: 54px;
 }
+.blurb {
+    background-color: var(--zodiac-blurb);
+    font-family: var(---league-spartan);
+    padding: 2vh 3vh;
+    color: var(--secondary-text);
+    border-radius: 16px;
+}
+.character-title-date {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-areas: "character-title . character-date" 
+}
+.character-title {
+    grid-area: character-title;
+}
+.character-date {
+    grid-area: character-date;
+}
+
