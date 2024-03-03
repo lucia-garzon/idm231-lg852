@@ -29,7 +29,29 @@
 
                     
                     </div>
-                    <img class="help_icon" src="images/Help-icon.svg" alt="Help icon">
+                    
+                    <!-- <div id="help-popup" class="popup">
+                        <div class="popup_content">
+                            <span class="close">&times;</span>
+                            <p>To start, input your birthdate. The Studio Ghibli character that matches your personality will be revealed after you do so. You can click the existing character buttons on the Home page to explore each character further.</p>
+                        </div>
+                    </div> -->
+
+                    <div>
+                        <img class="popup" onclick="helpMe()" src="images/Help-icon.svg" alt="Help icon">
+                        <span class="popup-text" id="helpPopup">
+                            <h1 class="lemon-light white">WELCOME TO THE</h1>
+                            <h1 class="lemon-light white">GHIBLI BIRTHDAY GENERATOR!</h1>
+                            <ol>
+                                <li>To start, input your birthdate.</li>
+                                <li>The Studio Ghibli character that matches your personality will be revealed after you do so.</li>
+                                <li>You can click the existing character icons on the Home page to explore each character further.</li>
+                            </ol>
+                            <p class="lemon-light white"><i></i>PLEASE CLICK THE HELP BUTTON TO CLOSE THIS POPUP</p>
+                        </span>
+                    </div>
+                    
+                
                 </div>
 
                 <div class="left-character left-aries">
@@ -214,8 +236,6 @@
             <img src="images/grass1.svg" alt="Studio ghibli grass">
         </div> -->
     </footer>
-    <script>
-        src="js/index.js"
-    </script>
+    <script src="js/index.js"></script>
 </body>
 </html>

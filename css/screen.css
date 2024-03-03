@@ -47,11 +47,15 @@ html {
     --league-spartan: 'League Spartan', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.grass img {
+.white {
+    color: var(--secondary-text);
+    line-height: 20px;
+}
+/* .grass img {
     margin-top: 20vh;
     width: 100%;
     height: auto;
-}
+} */
 
 .main {
     display: grid;
@@ -69,6 +73,7 @@ body {
 }
 h1, h2, h3  {
     color: var(--primary-text);
+    line-height: 41px;
 }
 p {
     font-family: var(--league-spartan);
@@ -252,3 +257,32 @@ button {
     grid-area: character-date;
 }
 
+
+
+.popup {
+    cursor: pointer;
+    margin-top: 10rem;
+}
+
+.popup-text {
+    display: none;
+    font-family: var(--league-spartan);
+    width: 44vw; /* Adjust width as needed */
+    background-color: var(--zodiac-blurb);
+    color: var(--secondary-text);
+    text-align: left;
+    border-radius: 8px;
+    padding: 1rem 3rem 1rem 3rem;
+    line-height: 28px;
+    
+    position: absolute;
+    z-index: 1;
+    top: 50px; /* Adjust distance from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-text.show {
+    display: block;
+}

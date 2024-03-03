@@ -16,6 +16,9 @@
 // function play_sound(selected_sign) {
 //   }
 
+
+// birthday form  birthday form   birthday form   birthday form   birthday form   birthday form   birthday form   birthday form   birthday form   
+
 const form = document.querySelector(".birthday-form"); // <form> element
 
 function handle_submit(event) {
@@ -44,3 +47,14 @@ function handle_submit(event) {
 }
 
 form.addEventListener("submit", handle_submit);
+
+
+
+
+// help pop-up  help pop-up   help pop-up   help pop-up  help pop-up   help pop-up   help pop-up   help pop-up   help pop-up   help pop-up   help pop-up  
+
+
+function helpMe() {
+    var popup = document.getElementById("helpPopup");
+    popup.classList.toggle("show");
+}
