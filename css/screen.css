@@ -141,12 +141,12 @@ button {
 
 .icon-container {
     position: relative;
+    z-index: 100;
     width: 30rem;
     height: 30rem;
     margin: 3rem 3rem 5rem 3rem;
     justify-content: center;
     justify-items: center;
-    
 
 
     display: grid;
@@ -178,62 +178,62 @@ button {
 .sign {
     background-color: none;
 }
-.ponyo {
+.ponyo-icon {
     grid-area: ponyo;
     bottom: 2px;
     right: 54px;
 }
-.mononoke {
+.mononoke-icon {
     grid-area: mononoke;
     bottom: 2px;
     right: 54px;
 }
-.totoro {
+.totoro-icon {
     grid-area: totoro;
     bottom: 2px;
     right: 54px;
 }
-.noface {
+.noface-icon {
     grid-area: noface;
     bottom: 2px;
     right: 54px;
 }
-.sophie {
+.sophie-icon {
     grid-area: sophie;
     bottom: 2px;
     right: 54px;
 }
-.howl {
+.howl-icon {
     grid-area: howl;
     bottom: 2px;
     right: 54px;
 }
-.satsuki {
+.satsuki-icon {
     grid-area: satsuki;
     bottom: 2px;
     right: 54px;
 }
-.chihiro {
+.chihiro-icon {
     grid-area: chihiro;
     bottom: 2px;
     right: 54px;
 }
-.yubaba {
+.yubaba-icon {
     grid-area: yubaba;
     bottom: 2px;
     right: 54px;
 }
-.kiki {
+.kiki-icon {
     grid-area: kiki;
     bottom: 2px;
     right: 54px;
 }
-.moro {
+.moro-icon {
     grid-area: moro;
     bottom: 2px;
     right: 54px;
 }
-.haku {
+.haku-icon {
     grid-area: haku;
     bottom: 2px;
     right: 54px;
@@ -244,6 +244,7 @@ button {
     padding: 2vh 3vh;
     color: var(--secondary-text);
     border-radius: 16px;
+    margin-top: 1rem;
 }
 .character-title-date {
     display: grid;
@@ -286,3 +287,12 @@ button {
 .popup-text.show {
     display: block;
 }
+
+.character {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 20px; /* Gap between grid items */
+    max-width: 1000px; /* Set a maximum width to prevent it from stretching too wide */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
