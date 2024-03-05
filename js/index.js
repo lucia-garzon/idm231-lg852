@@ -19,6 +19,7 @@
 
 // birthday form  birthday form   birthday form   birthday form   birthday form   birthday form   birthday form   birthday form   birthday form   
 
+// lovely signs
 const zodiacSigns = [
     { name: 'San', start: '03-21', end: '04-19' },
     { name: 'Totoro', start: '04-20', end: '05-20' },
@@ -34,15 +35,15 @@ const zodiacSigns = [
     { name: 'Ponyo', start: '02-19', end: '03-20' }
 ];
 
-// Hide all character divs initially
+// initially hides all character divs 
 const characterDivs = document.querySelectorAll('.character');
 characterDivs.forEach(characterDiv => {
     characterDiv.style.display = 'none';
 });
 
-// Function to determine the zodiac sign based on the input date
+// determines the zodiac sign based on the input date
 function getZodiacSign(birthday) {
-    const month = birthday.getMonth() + 1; // JavaScript months are zero-based
+    const month = birthday.getMonth() + 1; // js months are zero-based
     const day = birthday.getDate();
     const dateString = `${month}-${day}`;
 
@@ -54,55 +55,73 @@ function getZodiacSign(birthday) {
         }
     }
 
-    return null; // Return null if no sign is found
+    return null; // if no sign is found return null 
 }
 const form = document.querySelector(".birthday-form");
 
 
-// Event listener for form submission
+// listen for form submission
 form.addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); // prevent default form submission
 
     const birthdayInputValue = form.elements["birthday"].value;
-    const birthday = new Date(birthdayInputValue); // Convert input string to date object
+    const birthday = new Date(birthdayInputValue); // convert input string to date object
 
     const zodiacSign = getZodiacSign(birthday);
 
     if (zodiacSign) {
         console.log("Your Studio Ghibli is:", zodiacSign);
         
-        // Hide all character divs again
+        // hides all character divs again
         characterDivs.forEach(characterDiv => {
             characterDiv.style.display = 'none';
         });
         
-        // Show the character based on the zodiac sign
+        // shows the character based on the sign
         const characterDiv = document.querySelector(`.character.${zodiacSign.toLowerCase()}`);
         if (characterDiv) {
-            characterDiv.style.display = 'grid'; // Display the character div
+            characterDiv.style.display = 'grid'; // displays the character div
+        }
+
+        // hides the icon container and left section when form is submitted
+        const iconContainer = document.querySelector('.icon-container');
+        const leftSection = document.querySelector('.left');
+        if (iconContainer && leftSection) {
+            iconContainer.style.display = 'none';
+            leftSection.style.display = 'none';
+            // show #back-home
+            document.getElementById('back-home').style.display = 'inline-block';
         }
     } else {
         console.log("Unable to determine your zodiac sign.");
     }
 });
 
-// Event listener for icon container buttons
+// event listener for icon container buttons
 const iconButtons = document.querySelectorAll('.sign');
 iconButtons.forEach(button => {
     button.addEventListener('click', function() {
         const zodiacSign = this.getAttribute('data-sign');
         if (zodiacSign) {
-            // Hide all character divs again
+            // hide .left and .icon-container
+            const leftElement = document.querySelector('.left');
+            const iconContainer = document.querySelector('.icon-container');
+            leftElement.style.display = 'none';
+            iconContainer.style.display = 'none';
+            
+            // hide all character divs
             const characterDivs = document.querySelectorAll('.character');
             characterDivs.forEach(characterDiv => {
                 characterDiv.style.display = 'none';
             });
             
-            // Show the character based on the clicked button's data-sign attribute
+            // show the character corresponding to the clicked button
             const characterDiv = document.querySelector(`.character.${zodiacSign.toLowerCase()}`);
             if (characterDiv) {
-                characterDiv.style.display = 'grid'; // Display the character div
+                characterDiv.style.display = 'grid'; // display the character div
             }
+            // show #back-home
+            document.getElementById('back-home').style.display = 'inline-block';
         }
     });
 });
@@ -153,6 +172,23 @@ function handle_submit(event) {
 
 form.addEventListener("submit", handle_submit);
 
+// listener for #back-home
+document.getElementById('back-home').addEventListener('click', function() {
+    // shows .left and .icon-container
+    const leftElement = document.querySelector('.left');
+    const iconContainer = document.querySelector('.icon-container');
+    leftElement.style.display = 'block';
+    iconContainer.style.display = 'grid';
+    
+    // hides all character divs
+    const characterDivs = document.querySelectorAll('.character');
+    characterDivs.forEach(characterDiv => {
+        characterDiv.style.display = 'none';
+    });
+
+    // hides #back-home
+    this.style.display = 'none';
+});
 
 
 
