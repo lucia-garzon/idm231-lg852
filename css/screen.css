@@ -309,8 +309,11 @@ button {
 .character {
     display: grid;
     grid-template-columns: 500px 300px;
-    grid-gap: 20rem; /* Gap between grid items */
+    grid-gap: 10rem; /* Gap between grid items */
     max-width: 1000px; /* Set a maximum width to prevent it from stretching too wide */
     margin: 0 auto; /* Center the container horizontally */
 }
 
+.right-character {
+    height: 540px;
+}
