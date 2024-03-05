@@ -19,7 +19,112 @@
 
 // birthday form  birthday form   birthday form   birthday form   birthday form   birthday form   birthday form   birthday form   birthday form   
 
-const form = document.querySelector(".birthday-form"); // <form> element
+const zodiacSigns = [
+    { name: 'San', start: '03-21', end: '04-19' },
+    { name: 'Totoro', start: '04-20', end: '05-20' },
+    { name: 'No-Face', start: '05-21', end: '06-20' },
+    { name: 'Sophie', start: '06-21', end: '07-22' },
+    { name: 'Howl', start: '07-23', end: '08-22' },
+    { name: 'Satsuki', start: '08-23', end: '09-22' },
+    { name: 'Chihiro', start: '09-23', end: '10-22' },
+    { name: 'Yubaba', start: '10-23', end: '11-21' },
+    { name: 'Kiki', start: '11-22', end: '12-21' },
+    { name: 'Moro', start: '12-22', end: '01-19' },
+    { name: 'Haku', start: '01-20', end: '02-18' },
+    { name: 'Ponyo', start: '02-19', end: '03-20' }
+];
+
+// Hide all character divs initially
+const characterDivs = document.querySelectorAll('.character');
+characterDivs.forEach(characterDiv => {
+    characterDiv.style.display = 'none';
+});
+
+// Function to determine the zodiac sign based on the input date
+function getZodiacSign(birthday) {
+    const month = birthday.getMonth() + 1; // JavaScript months are zero-based
+    const day = birthday.getDate();
+    const dateString = `${month}-${day}`;
+
+    for (const sign of zodiacSigns) {
+        const start = new Date(`${birthday.getFullYear()}-${sign.start}`);
+        const end = new Date(`${birthday.getFullYear()}-${sign.end}`);
+        if (birthday >= start && birthday <= end) {
+            return sign.name;
+        }
+    }
+
+    return null; // Return null if no sign is found
+}
+const form = document.querySelector(".birthday-form");
+
+
+// Event listener for form submission
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const birthdayInputValue = form.elements["birthday"].value;
+    const birthday = new Date(birthdayInputValue); // Convert input string to date object
+
+    const zodiacSign = getZodiacSign(birthday);
+
+    if (zodiacSign) {
+        console.log("Your Studio Ghibli is:", zodiacSign);
+        
+        // Hide all character divs again
+        characterDivs.forEach(characterDiv => {
+            characterDiv.style.display = 'none';
+        });
+        
+        // Show the character based on the zodiac sign
+        const characterDiv = document.querySelector(`.character.${zodiacSign.toLowerCase()}`);
+        if (characterDiv) {
+            characterDiv.style.display = 'grid'; // Display the character div
+        }
+    } else {
+        console.log("Unable to determine your zodiac sign.");
+    }
+});
+
+// Event listener for icon container buttons
+const iconButtons = document.querySelectorAll('.sign');
+iconButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const zodiacSign = this.getAttribute('data-sign');
+        if (zodiacSign) {
+            // Hide all character divs again
+            const characterDivs = document.querySelectorAll('.character');
+            characterDivs.forEach(characterDiv => {
+                characterDiv.style.display = 'none';
+            });
+            
+            // Show the character based on the clicked button's data-sign attribute
+            const characterDiv = document.querySelector(`.character.${zodiacSign.toLowerCase()}`);
+            if (characterDiv) {
+                characterDiv.style.display = 'grid'; // Display the character div
+            }
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function handle_submit(event) {
     event.preventDefault(); // Prevent the default form submission
