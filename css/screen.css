@@ -47,6 +47,9 @@ html {
     --league-spartan: 'League Spartan', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* .character {
+    display: none;
+}  */
 .white {
     color: var(--secondary-text);
     line-height: 20px;
@@ -107,6 +110,7 @@ button {
 .help_icon {
     margin-top: 45vh;
 }
+
 .find-my-character {
     padding: 1rem 4rem;
     border-radius: 20px;
@@ -277,7 +281,7 @@ button {
     line-height: 28px;
     
     position: absolute;
-    z-index: 1;
+    z-index: 101;
     top: 50px; /* Adjust distance from the top */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%);
@@ -290,8 +294,8 @@ button {
 
 .character {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    grid-gap: 20px; /* Gap between grid items */
+    grid-template-columns: 500px 300px;
+    grid-gap: 20rem; /* Gap between grid items */
     max-width: 1000px; /* Set a maximum width to prevent it from stretching too wide */
     margin: 0 auto; /* Center the container horizontally */
 }
