@@ -66,9 +66,23 @@ html {
     /* align-items: center; */
 
 }
-.left {
+.left, .left-character {
     margin-left: 3rem;
     margin-top: 8rem;
+}
+#back-home {
+    font-size: 18px;
+    color: var(--button-color);
+    display: none;
+    cursor: pointer;
+    text-decoration: underline;
+    position: relative;
+    z-index: 1000;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    /* 
+    margin-left: 3rem; */
+    /* margin-top: -22rem; */
 }
 
 body {
@@ -172,11 +186,11 @@ button {
 }
 
 .icon {
-    transition: transform 0.3s ease; /* Add transition effect */
+    transition: transform 1s ease; /* Add transition effect */
 }
 
 .icon:hover {
-    border: 2px solid var(--icon-border); /* Add border on hover */
+    box-shadow: 0 0 10px rgba(14, 101, 49, 0.648);
     border-radius: 50%;
 }
 .sign {
