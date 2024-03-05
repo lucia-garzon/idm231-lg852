@@ -121,9 +121,9 @@ button {
     /* margin-left: 3rem; */
 }
 
-.help_icon {
-    margin-top: 45vh;
-}
+/* .help_icon {
+    margin-top: 50vh;
+} */
 
 .find-my-character {
     padding: 1rem 4rem;
@@ -280,7 +280,7 @@ button {
 
 .popup {
     cursor: pointer;
-    margin-top: 10rem;
+    margin-top: 19.5rem;
 }
 
 .popup-text {
