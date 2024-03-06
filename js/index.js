@@ -57,8 +57,8 @@ function getZodiacSign(birthday) {
 
     return null; // if no sign is found return null 
 }
-const form = document.querySelector(".birthday-form");
 
+const form = document.querySelector(".birthday-form");
 
 // listen for form submission
 form.addEventListener("submit", function(event) {
