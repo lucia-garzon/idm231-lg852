@@ -60,6 +60,13 @@ function getZodiacSign(birthday) {
 
 const form = document.querySelector(".birthday-form");
 
+function playCharacterAudio(characterName) {
+    const audioElement = document.getElementById(`${characterName.toLowerCase()}-audio`);
+    if (audioElement) {
+        audioElement.play();
+    }
+}
+
 // listen for form submission
 form.addEventListener("submit", function(event) {
     event.preventDefault(); // prevent default form submission
@@ -76,13 +83,13 @@ form.addEventListener("submit", function(event) {
         characterDivs.forEach(characterDiv => {
             characterDiv.style.display = 'none';
         });
-        
         // shows the character based on the sign
         const characterDiv = document.querySelector(`.character.${zodiacSign.toLowerCase()}`);
+        // play sound 
+        playCharacterAudio(zodiacSign);
         if (characterDiv) {
             characterDiv.style.display = 'grid'; // displays the character div
         }
-
         // hides the icon container and left section when form is submitted
         const iconContainer = document.querySelector('.icon-container');
         const leftSection = document.querySelector('.left');
@@ -119,6 +126,8 @@ iconButtons.forEach(button => {
             const characterDiv = document.querySelector(`.character.${zodiacSign.toLowerCase()}`);
             if (characterDiv) {
                 characterDiv.style.display = 'grid'; // display the character div
+                // play character sound
+                playCharacterAudio(zodiacSign);
             }
             // show #back-home
             document.getElementById('back-home').style.display = 'inline-block';
