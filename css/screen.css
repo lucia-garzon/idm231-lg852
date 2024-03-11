@@ -71,11 +71,14 @@ html {
     margin-top: 8rem;
 }
 #back-home {
-    font-size: 18px;
-    color: var(--button-color);
+    font-size: 16px;
+    color: var(--secondary-text);
+    background-color: none;
+    border: none;
+    padding: 1rem;
+    border-radius: 30px;
     display: none;
     cursor: pointer;
-    text-decoration: underline;
     position: relative;
     z-index: 1000;
     margin-left: 3rem;
@@ -83,6 +86,10 @@ html {
     /* 
     margin-left: 3rem; */
     /* margin-top: -22rem; */
+}
+#back-home:hover{
+    font-style: normal;
+    animation: overshoot 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
 }
 
 body {
