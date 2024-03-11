@@ -60,12 +60,13 @@ function getZodiacSign(birthday) {
 
 const form = document.querySelector(".birthday-form");
 
-function playCharacterAudio(characterName) {
-    const audioElement = document.getElementById(`${characterName.toLowerCase()}-audio`);
+function playCharacterAudio(zodiacSign) {
+    const audioElement = document.getElementById(`${zodiacSign.toLowerCase()}-audio`);
     if (audioElement) {
         audioElement.play();
     }
 }
+
 
 // listen for form submission
 form.addEventListener("submit", function(event) {
@@ -126,9 +127,10 @@ iconButtons.forEach(button => {
             const characterDiv = document.querySelector(`.character.${zodiacSign.toLowerCase()}`);
             if (characterDiv) {
                 characterDiv.style.display = 'grid'; // display the character div
-                // play character sound
-                playCharacterAudio(zodiacSign);
+
             }
+            // play character sound
+            playCharacterAudio(zodiacSign);
             // show #back-home
             document.getElementById('back-home').style.display = 'inline-block';
         }
