@@ -195,21 +195,6 @@ button {
 .icon {
     transition: transform 1s ease; /* Add transition effect */
 }
-@media screen and (min-width:0px) and (max-width: 767px) {
-    .icon-container {
-        width: 6rem;
-        height: 51rem;
-        right: 144px;
-        bottom: -423px;
-        gap: 3rem;
-        display: grid;
-        grid-template-columns: repeat(5,20%);
-        grid-template-rows: repeat(12,10%);
-    }
-    .icon {
-        width: 20vw;
-    }
-}
 
 .icon:hover {
     box-shadow: 0 0 10px rgba(14, 101, 49, 0.648);
@@ -279,6 +264,34 @@ button {
     bottom: 2px;
     right: 54px;
 }
+@media screen and (min-width:0px) and (max-width: 767px) {
+    .icon-container {
+        width: 9rem;
+        height: 51rem;
+        right: 236px;
+        bottom: -423px;
+        gap: 3rem;
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(12,10%);
+        grid-template-areas: 
+        'ponyo mononoke' 
+        'totoro noface' 
+        'sophie howl' 
+        'chihiro yubaba' 
+        'kiki moro' 
+        'haku satsuki';
+    }
+    .icon {
+        width: 26vw;
+        
+    }
+    .ponyo-icon, .mononoke-icon, .totoro-icon, .noface-icon, .sophie-icon, .howl-icon, .satsuki-icon, .chihiro-icon, .yubaba-icon, .kiki-icon, .moro-icon, .haku-icon {
+        margin-right: auto;
+        margin-bottom: auto; 
+        position: static;
+    }
+}
 .blurb {
     background-color: var(--zodiac-blurb);
     font-family: var(---league-spartan);
@@ -307,7 +320,7 @@ button {
 }
 @media screen and (min-width:0px) and (max-width: 767px) {
     .popup {
-        margin-top: 40rem
+        margin-top: 50rem
     }
 }
 
