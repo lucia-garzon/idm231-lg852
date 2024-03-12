@@ -101,6 +101,7 @@ h1, h2, h3  {
 }
 p {
     font-family: var(--league-spartan);
+    line-height: 25px;
 }
 .lemon-regular {
     font-family: var(--lemon-regular);
