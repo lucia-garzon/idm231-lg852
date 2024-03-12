@@ -183,13 +183,13 @@ function handle_submit(event) {
 
 form.addEventListener("submit", handle_submit);
 
-// function to pause the audio element
-function pauseCharacterAudio() {
+// function to stop the audio element
+function stopCharacterAudio() {
     const audioElements = document.querySelectorAll('audio');
     audioElements.forEach(audioElement => {
-        if (!audioElement.paused) {
-            audioElement.pause();
-        }
+        audioElement.pause();
+        // reset the audio to the beginning
+        audioElement.currentTime = 0; 
     });
 }
 
@@ -197,7 +197,7 @@ function pauseCharacterAudio() {
 // listener for #back-home
 document.getElementById('back-home').addEventListener('click', function() {
     // pause the audio element
-    pauseCharacterAudio();
+    stopCharacterAudio();
     // shows .left and .icon-container
     const leftElement = document.querySelector('.left');
     const iconContainer = document.querySelector('.icon-container');
