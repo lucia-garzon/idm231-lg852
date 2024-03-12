@@ -198,10 +198,13 @@ button {
 @media screen and (min-width:0px) and (max-width: 767px) {
     .icon-container {
         width: 6rem;
-        height: 28rem;
+        height: 51rem;
         right: 144px;
         bottom: -423px;
-        gap: 2rem;
+        gap: 3rem;
+        display: grid;
+        grid-template-columns: repeat(5,20%);
+        grid-template-rows: repeat(12,10%);
     }
     .icon {
         width: 20vw;
