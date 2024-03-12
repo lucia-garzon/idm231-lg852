@@ -206,8 +206,8 @@ button {
 }
 .ponyo-icon {
     grid-area: ponyo;
-    bottom: 2px;
-    right: 54px;
+    bottom: -20px;
+    right: 58px;
 }
 .mononoke-icon {
     grid-area: mononoke;
@@ -216,48 +216,48 @@ button {
 }
 .totoro-icon {
     grid-area: totoro;
-    bottom: 2px;
-    right: 54px;
+    bottom: -20px;
+    right: 48px;
 }
 .noface-icon {
     grid-area: noface;
-    bottom: 2px;
-    right: 54px;
+    bottom: 9px;
+    right: 28px;
 }
 .sophie-icon {
     grid-area: sophie;
-    bottom: 2px;
-    right: 54px;
+    bottom: 9px;
+    right: 81px;
 }
 .howl-icon {
     grid-area: howl;
-    bottom: 2px;
-    right: 54px;
+    bottom: 8px;
+    right: 64px;
 }
 .satsuki-icon {
     grid-area: satsuki;
-    bottom: 2px;
+    bottom: 41px;
     right: 54px;
 }
 .chihiro-icon {
     grid-area: chihiro;
-    bottom: 2px;
+    bottom: 8px;
     right: 54px;
 }
 .yubaba-icon {
     grid-area: yubaba;
-    bottom: 2px;
-    right: 54px;
+    bottom: -1px;
+    right: 23px;
 }
 .kiki-icon {
     grid-area: kiki;
-    bottom: 2px;
-    right: 54px;
+    bottom: -1px;
+    right: 83px;
 }
 .moro-icon {
     grid-area: moro;
-    bottom: 2px;
-    right: 54px;
+    bottom: 41px;
+    right: 60px;
 }
 .haku-icon {
     grid-area: haku;
