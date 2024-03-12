@@ -211,7 +211,7 @@ button {
 }
 .mononoke-icon {
     grid-area: mononoke;
-    bottom: 2px;
+    bottom: 13px;
     right: 54px;
 }
 .totoro-icon {
