@@ -198,7 +198,7 @@ document.getElementById('back-home').addEventListener('click', function() {
     });
 
     //stops audio element
-    audioElement.stop();
+    // audioElement.stop();
 
 
     // hides #back-home
