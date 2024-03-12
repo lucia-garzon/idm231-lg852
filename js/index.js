@@ -185,9 +185,6 @@ form.addEventListener("submit", handle_submit);
 
 // listener for #back-home
 document.getElementById('back-home').addEventListener('click', function() {
-    //stops audio element
-    audioElement.stop();
-
     // shows .left and .icon-container
     const leftElement = document.querySelector('.left');
     const iconContainer = document.querySelector('.icon-container');
@@ -199,6 +196,10 @@ document.getElementById('back-home').addEventListener('click', function() {
     characterDivs.forEach(characterDiv => {
         characterDiv.style.display = 'none';
     });
+
+    //stops audio element
+    audioElement.stop();
+
 
     // hides #back-home
     this.style.display = 'none';
