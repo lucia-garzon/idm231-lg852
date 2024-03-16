@@ -13,7 +13,8 @@ const zodiacSigns = [
     { name: 'Chihiro', start: '09-23', end: '10-22' },
     { name: 'Yubaba', start: '10-23', end: '11-21' },
     { name: 'Kiki', start: '11-22', end: '12-21' },
-    { name: 'Moro', start: '12-22', end: '01-19' },
+    { name: 'Moro', start: '12-22', end: '12-31' },
+    { name: 'Moro', start: '01-01', end: '01-19' },
     { name: 'Haku', start: '01-20', end: '02-18' },
     { name: 'Ponyo', start: '02-19', end: '03-20' }
 ];
