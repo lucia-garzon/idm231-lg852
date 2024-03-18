@@ -1,5 +1,4 @@
 
-
 // birthday form  birthday form   birthday form   birthday form   birthday form   birthday form   birthday form   birthday form   birthday form   
 
 // lovely signs
@@ -44,6 +43,7 @@ function getZodiacSign(birthday) {
 
 const form = document.querySelector(".birthday-form");
 
+// play that sound!!
 function playCharacterAudio(zodiacSign) {
     const audioElement = document.getElementById(`${zodiacSign.toLowerCase()}-audio`);
     if (audioElement) {
@@ -57,7 +57,7 @@ form.addEventListener("submit", function(event) {
     event.preventDefault(); // prevent default form submission
 
     const birthdayInputValue = form.elements["birthday"].value;
-    const birthday = new Date(birthdayInputValue); // convert input string to date object
+    const birthday = new Date(birthdayInputValue); 
 
     const zodiacSign = getZodiacSign(birthday);
 
@@ -70,7 +70,7 @@ form.addEventListener("submit", function(event) {
         });
         // shows the character based on the sign
         const characterDiv = document.querySelector(`.character.${zodiacSign.toLowerCase()}`);
-        // play sound 
+        // plays sound 
         playCharacterAudio(zodiacSign);
         if (characterDiv) {
             characterDiv.style.display = 'grid'; // displays the character div
@@ -88,6 +88,10 @@ form.addEventListener("submit", function(event) {
         console.log("Unable to determine your zodiac sign.");
     }
 });
+
+
+// icon container buttons icon container buttons icon container buttons icon container buttons icon container buttons icon container buttons icon container buttons icon container buttons icon container buttons 
+
 
 // event listener for icon container buttons
 const iconButtons = document.querySelectorAll('.sign');
@@ -121,40 +125,21 @@ iconButtons.forEach(button => {
     });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function handle_submit(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); // prevent default form submission
     console.group("Form submission");
-    console.log(form); // <form> element
+    console.log(form); // form element
     console.log(form.elements); // array of form elements
-    console.log(form.elements["birthday"].value); // 1990-01-01
+    console.log(form.elements["birthday"].value); // 2003-02-05
     console.groupEnd();
 
     const birthdayInputValue = form.elements["birthday"].value;
 
-    console.log(birthdayInputValue); // 2024-02-20
-    const date = birthdayInputValue.split("-"); // ["2024", "02", "20"]
-    const year = date[0]; // 2024
-    const day = date[2]; // 20
-    const month = date[1]; // 02
+    console.log(birthdayInputValue); // 2003-02-05
+    const date = birthdayInputValue.split("-"); // ["2003", "02", "05"]
+    const year = date[0]; // 2003
+    const day = date[2]; // 02
+    const month = date[1]; // 05
 
     console.log('Year:', year, 'Month:', month, 'Day:', day);
 
@@ -172,11 +157,12 @@ function stopCharacterAudio() {
     const audioElements = document.querySelectorAll('audio');
     audioElements.forEach(audioElement => {
         audioElement.pause();
-        // reset the audio to the beginning
+        // reset the audio to the verrrry beginning
         audioElement.currentTime = 0; 
     });
 }
 
+// back-home  back-home    back-home   back-home  back-home   back-home    back-home    back-home   back-home    back-home   
 
 // listener for #back-home
 document.getElementById('back-home').addEventListener('click', function() {
@@ -194,12 +180,9 @@ document.getElementById('back-home').addEventListener('click', function() {
         characterDiv.style.display = 'none';
     });
 
-
-
     // hides #back-home
     this.style.display = 'none';
 });
-
 
 
 // help pop-up  help pop-up   help pop-up   help pop-up  help pop-up   help pop-up   help pop-up   help pop-up   help pop-up   help pop-up   help pop-up  
