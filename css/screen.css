@@ -7,26 +7,15 @@
 @font-face {
     font-family: "Lemon-milk-light";
     src: url('../fonts/lemon-milk-light.ttf') format('truetype');
-    /* font-weight: 0 800; */
-    /* font-style: light; */
 }
 @font-face {
     font-family: "Lemon-milk-medium";
     src: url('../fonts/lemon-milk-medium.ttf') format('truetype');
-    /* font-weight: 0 800; */
-    /* font-style: light; */
 }
 @font-face {
     font-family: "Lemon-milk-bold";
     src: url('../fonts/lemon-milk-bold.ttf') format('truetype');
-    /* font-weight: 0 800; */
-    /* font-style: light; */
 }
-/* @font-face {
-    font-family: "League Spartan";
-    src: url('../fonts/League Spartan.ttf') format('truetype');
-    
-} */
 
 * {
     box-sizing: border-box;
@@ -47,18 +36,12 @@ html {
     --league-spartan: 'League Spartan', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* .character {
-    display: none;
-}  */
+
 .white {
     color: var(--secondary-text);
     line-height: 20px;
 }
-/* .grass img {
-    margin-top: 20vh;
-    width: 100%;
-    height: auto;
-} */
+
 
 .main {
     display: grid;
@@ -83,9 +66,6 @@ html {
     z-index: 1000;
     margin-left: 3rem;
     margin-top: 2rem;
-    /* 
-    margin-left: 3rem; */
-    /* margin-top: -22rem; */
 }
 #back-home:hover{
     font-style: normal;
@@ -115,10 +95,6 @@ p {
 .lemon-bold {
     font-family: var(--lemon-bold);
 }
-/* .title {
-    margin-top: 8rem;
-    margin-left: 3rem;
-} */
 
 label, input {
     font-family: var(--league-spartan);
@@ -126,12 +102,10 @@ label, input {
 button {
     background-color: var(--button-color);
     color: var(--secondary-text);
-    /* margin-left: 3rem; */
+    
 }
 
-/* .help_icon {
-    margin-top: 50vh;
-} */
+
 
 .find-my-character {
     padding: 1rem 4rem;
@@ -177,11 +151,6 @@ button {
 
     display: grid;
     grid-template-areas:
-    /* ".      ponyo mononoke   totoro     .    " 
-    "noface  .        .      .         sophie  " 
-    "howl .        .   .         chihiro" 
-    "yubaba   .        .      .         kiki" 
-    ".      moro     haku satsuki .    "; */
 
     ".      ponyo mononoke   totoro     .    " 
     "noface  .        .      .         sophie  " 
@@ -193,7 +162,7 @@ button {
     gap: 2rem; 
 }
 .icon {
-    transition: transform 1s ease; /* Add transition effect */
+    transition: transform 1s ease; 
 }
 
 .icon:hover {
@@ -302,7 +271,6 @@ button {
 }
 .character-title-date {
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
     grid-template-areas: "character-title . character-date" 
 }
 .character-title {
@@ -357,10 +325,4 @@ button {
 
 .right-character {
     height: 540px;
-    /* background-color:#72b18c;
-    border-radius: 14px; */
 }
-
-/* .no-bg {
-    background-color: none;
-} */
